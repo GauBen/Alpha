@@ -1,0 +1,21 @@
+{
+  "extends": [
+    "stylelint-config-standard",
+    "stylelint-rscss/config",
+    "stylelint-8-point-grid",
+    "stylelint-config-rational-order",
+    "stylelint-plugin-stylus/standard"
+  ],
+  "rules": {
+    "stylus/indentation": null,
+    "stylus/single-line-comment": null,
+    "declaration-empty-line-before": "never",
+    "custom-property-empty-line-before": "never",
+    "rscss/class-format": [
+      true,
+      {
+        "element": "^[a-z0-9]+|[a-z0-9]+-[a-z0-9]+$"
+      }
+    ]
+  }
+}

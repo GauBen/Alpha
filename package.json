@@ -1,0 +1,27 @@
+{
+  "name": "alpha",
+  "version": "1.0.0",
+  "description": "Plaquette alpha n7",
+  "main": "index.js",
+  "repository": "https://github.com/GauBen/Alpha.git",
+  "author": "GauBen <benaim.gautier@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "npm-run-all --parallel watch:*",
+    "watch:eleventy": "eleventy --serve",
+    "watch:parcel": "parcel src/_assets/design.styl --out-dir _site"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^0.11.0",
+    "npm-run-all": "^4.1.5",
+    "parcel-bundler": "^1.12.4",
+    "stylelint": "^13.5.0",
+    "stylelint-8-point-grid": "^0.2.6",
+    "stylelint-config-rational-order": "^0.1.2",
+    "stylelint-config-standard": "^20.0.0",
+    "stylelint-order": "^4.0.0",
+    "stylelint-plugin-stylus": "^0.9.0",
+    "stylelint-rscss": "^0.4.0",
+    "stylus": "^0.54.7"
+  }
+}
