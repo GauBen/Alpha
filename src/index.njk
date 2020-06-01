@@ -7,43 +7,55 @@
     <link rel="stylesheet" href="/design.css">
   </head>
   <body>
-    <article class="hero-frame hero-alpha">
-      <h1 class="alpha">{{ "α" }}</h1>
-      <h2 class="n7">n7</h2>
-    </article>
-    <article class="hero-frame hero-ae">
-      <div class="_overflow-hidden">
-        <div class="_small-rotation">
-          <div class="portrait-row">
-            {% for j in [1, 2] -%}
-              {% for i in [1, 2, 3, 4, 5] -%}
-                <img src="https://picsum.photos/300?{{ i }}" alt="Portrait" class="portrait">
+    <main class="splash-page _overflow-hidden">
+      <article class="frame hero-alpha">
+        <h1 class="alpha">{{ "α" }}</h1>
+        <h2 class="n7">n7</h2>
+      </article>
+      <article class="frame hero-ae">
+        <div class="_overflow-hidden">
+          <div class="_small-rotation">
+            <div class="portrait-row">
+              {% for j in [1, 2] -%}
+                {% for i in [1, 2, 3, 4, 5] -%}
+                  <img src="https://picsum.photos/300?{{ i }}" alt="Portrait" class="portrait">
+                {%- endfor %}
               {%- endfor %}
-            {%- endfor %}
+            </div>
+          </div>
+          <div class="_small-rotation -padded">
+            <div class="portrait-row -reversed">
+              {% for j in [1, 2] -%}
+                {% for i in [6, 7, 8, 9, 10] -%}
+                  <img src="https://picsum.photos/300?{{ i }}" alt="Portrait" class="portrait">
+                {%- endfor %}
+              {%- endfor %}
+            </div>
           </div>
         </div>
-        <div class="_small-rotation -padded">
-          <div class="portrait-row -reversed">
-            {% for j in [1, 2] -%}
-              {% for i in [6, 7, 8, 9, 10] -%}
-                <img src="https://picsum.photos/300?{{ i }}" alt="Portrait" class="portrait">
-              {%- endfor %}
-            {%- endfor %}
-          </div>
+        <h1 class="aen7">AEn7</h1>
+        <blockquote class="quoted-text">
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum iure ex repudiandae quia impedit veritatis voluptatibus aperiam eligendi, labore nesciunt! Necessitatibus, repellendus voluptatum reiciendis nobis rem minima itaque quo ipsa?</p>
+          <footer class="author">—Tiph', présidente de l'AEn7</footer>
+        </blockquote>
+      </article>
+      <article class="frame hero-clubs -tall">
+        <div class="title">
+          <h1>Les clubs</h1>
+          <h2>Une vie associative très riche</h2>
         </div>
-      </div>
-      <h1 class="aen7">AEn7</h1>
-      <p>Le mot de la prez'</p>
-    </article>
-    <article class="hero-frame hero-clubs">
-      <h1 class="clubs">Les clubs</h1>
-    </article>
-    <article class="hero-frame hero-toulouse">
-      <h1 class="clubs">Toulouse</h1>
-    </article>
-    <article class="hero-frame hero-discover">
-      <h1 class="discover">Découvrez l'n7</h1>
-    </article>
-    <script src="/design.js"></script>
+        {% for i in [1, 2, 3, 4, 5, 6, 7, 8, 9] -%}
+          <div class="picture"><img src="https://picsum.photos/300/200?{{ i }}" alt="Random picture" class="framed-picture -picture-{{ i }}"></div>
+        {%- endfor %}
+      </article>
+      <article class="frame hero-toulouse">
+        <h1 class="toulouse">Toulouse</h1>
+        <p>C'est la première ville étudiante de France, et l'n7 se trouve en plein coeur.</p>
+      </article>
+      <article class="frame hero-discover">
+        <h1 class="discover">Découvrez l'n7</h1>
+      </article>
+    </main>
+    <script src="/main.js"></script>
   </body>
 </html>

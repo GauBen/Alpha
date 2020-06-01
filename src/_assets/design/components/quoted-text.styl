@@ -1,0 +1,20 @@
+.quoted-text
+  position relative
+  margin $gap-normal
+  text-align justify
+
+  &::before
+    position absolute
+    top -3rem
+    left -2rem
+    z-index -1
+    color $purple
+    font-size 12rem
+    line-height 1
+    content '“'
+
+  > .author
+    color lighten($purple, 20%)
+    font-weight bold
+    font-style italic
+    text-align right

@@ -1,0 +1,39 @@
+.hero-clubs
+  position relative
+  min-height 100vmax
+
+  > .title
+  > .picture
+    position absolute
+    top 0
+    right 0
+    bottom 0
+    left 0
+    display flex
+    flex-direction column
+    align-items center
+    justify-content center
+
+  > .title
+    z-index 1
+    color $background-color
+
+    > h1
+    > h2
+      margin 0
+      padding 0
+      text-align center
+
+    > h1
+      color transparent
+      font-weight 900
+      font-size 8rem
+      line-height 0.9
+      letter-spacing -0.05em
+      text-transform uppercase
+      background-image linear-gradient(to bottom, $color, lighten($purple, 20%))
+      -webkit-background-clip text
+      background-clip text
+
+    > h2
+      color lighten($purple, 20%)

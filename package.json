@@ -9,7 +9,7 @@
   "scripts": {
     "start": "npm-run-all --parallel watch:*",
     "watch:eleventy": "eleventy --serve",
-    "watch:parcel": "parcel src/_assets/design.styl --out-dir _site"
+    "watch:parcel": "parcel src/_assets/{main.ts,design.styl} --out-dir _site"
   },
   "devDependencies": {
     "@11ty/eleventy": "^0.11.0",
@@ -22,6 +22,7 @@
     "stylelint-order": "^4.0.0",
     "stylelint-plugin-stylus": "^0.9.0",
     "stylelint-rscss": "^0.4.0",
-    "stylus": "^0.54.7"
+    "stylus": "^0.54.7",
+    "typescript": "^3.9.3"
   }
 }
