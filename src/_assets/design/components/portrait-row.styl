@@ -1,0 +1,21 @@
+.portrait-row
+  display inline-block
+  white-space nowrap
+  animation portrait-row $timing-contemplative infinite linear
+
+  &.-reversed
+    animation-name portrait-row-reversed
+
+  > .portrait
+    width auto
+    min-width (100vw / ($number-of-portraits - 1))
+    height auto
+    max-height 50vh
+
+@keyframes portrait-row
+  to
+    transform translateX((-100% / 2))
+
+@keyframes portrait-row-reversed
+  from
+    transform translateX((-100% / 2))

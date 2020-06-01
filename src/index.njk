@@ -1,14 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alpha // n7</title>
     <link rel="stylesheet" href="/design.css">
-</head>
-<body>
-    <h1>{{ "α" }}</h1>
-    <h2>n7</h2>
+  </head>
+  <body>
+    <article class="hero-frame hero-alpha">
+      <h1 class="alpha">{{ "α" }}</h1>
+      <h2 class="n7">n7</h2>
+    </article>
+    <article class="hero-frame hero-ae">
+      <div class="_overflow-hidden">
+        <div class="_small-rotation">
+          <div class="portrait-row">
+            {% for j in [1, 2] -%}
+              {% for i in [1, 2, 3, 4, 5] -%}
+                <img src="https://picsum.photos/300?{{ i }}" alt="Portrait" class="portrait">
+              {%- endfor %}
+            {%- endfor %}
+          </div>
+        </div>
+        <div class="_small-rotation -padded">
+          <div class="portrait-row -reversed">
+            {% for j in [1, 2] -%}
+              {% for i in [6, 7, 8, 9, 10] -%}
+                <img src="https://picsum.photos/300?{{ i }}" alt="Portrait" class="portrait">
+              {%- endfor %}
+            {%- endfor %}
+          </div>
+        </div>
+      </div>
+      <h1 class="aen7">AEn7</h1>
+      <p>Le mot de la prez'</p>
+    </article>
+    <article class="hero-frame hero-clubs">
+      <h1 class="clubs">Les clubs</h1>
+    </article>
+    <article class="hero-frame hero-toulouse">
+      <h1 class="clubs">Toulouse</h1>
+    </article>
+    <article class="hero-frame hero-discover">
+      <h1 class="discover">Découvrez l'n7</h1>
+    </article>
     <script src="/design.js"></script>
-</body>
+  </body>
 </html>

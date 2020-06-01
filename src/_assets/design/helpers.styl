@@ -1,0 +1,13 @@
+._hidden
+  display none
+
+._small-rotation
+  transform rotate($small-angle)
+  transform-origin 0 0
+
+  &.-padded
+    padding-bottom s('calc(%s + %s)', 100% * tan($small-angle), $small-gap)
+
+._overflow-hidden
+  max-width 100%
+  overflow hidden
