@@ -3,6 +3,10 @@
   white-space nowrap
   animation portrait-row $timing-contemplative infinite linear
 
+  &.-on-scroll
+    animation portrait-row 1s linear paused
+    animation-delay calc(0.2 * -1s * var(--scroll))
+
   &.-reversed
     animation-name portrait-row-reversed
 
@@ -14,8 +18,8 @@
 
 @keyframes portrait-row
   to
-    transform translateX((-100% / 2))
+    transform translateX((-100% / 3))
 
 @keyframes portrait-row-reversed
   from
-    transform translateX((-100% / 2))
+    transform translateX((-100% / 3))

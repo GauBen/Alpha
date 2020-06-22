@@ -1,20 +1,21 @@
 .quoted-text
   position relative
   margin $gap-normal
+  padding 0 $gap-normal
   text-align justify
 
   &::before
     position absolute
-    top -3rem
-    left -2rem
+    top -6rem
+    left 0
     z-index -1
     color $purple
     font-size 12rem
     line-height 1
-    content '“'
+    content '«'
 
   > .author
-    color lighten($purple, 20%)
+    color lighten($purple, 50%)
     font-weight bold
     font-style italic
     text-align right

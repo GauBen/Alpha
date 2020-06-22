@@ -18,22 +18,60 @@
     z-index 1
     color $background-color
 
-    > h1
-    > h2
+    > .big
+    > .small
       margin 0
       padding 0
       text-align center
 
-    > h1
+    > .big
       color transparent
       font-weight 900
       font-size 8rem
       line-height 0.9
       letter-spacing -0.05em
       text-transform uppercase
-      background-image linear-gradient(to bottom, $color, lighten($purple, 20%))
+      background-image linear-gradient(to bottom, $color, lighten($purple, 50%))
       -webkit-background-clip text
       background-clip text
+      filter drop-shadow(0 0 $gap-normal $background-color)
 
-    > h2
-      color lighten($purple, 20%)
+    > .small
+      color lighten($purple, 50%)
+      text-shadow 0 0 $gap-normal $background-color
+
+  > .picture
+    animation slidein-1 linear 1s paused
+    animation-delay calc(-2s * var(--scroll))
+
+    &.-slidein-1
+      animation-name slidein-1
+
+    &.-slidein-2
+      animation-name slidein-2
+
+    &.-slidein-3
+      animation-name slidein-3
+
+    &.-slidein-4
+      animation-name slidein-4
+
+@keyframes slidein-1
+  from
+    transform translate(-100vw, -10vh) rotate(-10deg)
+    opacity 0
+
+@keyframes slidein-2
+  from
+    transform translate(100vw, -10vh) rotate(5deg)
+    opacity 0
+
+@keyframes slidein-3
+  from
+    transform translate(50vw, 100vh) rotate(-10deg)
+    opacity 0
+
+@keyframes slidein-4
+  from
+    transform translate(-50vw, 100vh) rotate(5deg)
+    opacity 0

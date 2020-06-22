@@ -5,15 +5,24 @@
   justify-content center
 
   > .toulouse
+    display flex
+    align-items flex-end
+    height 50vh
+    margin 0
+    padding 1vh 0 5vh
     color transparent
-    font-size 8rem
-    text-transform uppercase
+    font-size 20vh
+    line-height 0.6
+    letter-spacing -0.1em
+    text-align center
     background-image url('https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Toulouse_Capitole_Night_Wikimedia_Commons.jpg/1280px-Toulouse_Capitole_Night_Wikimedia_Commons.jpg')
     background-repeat no-repeat
     background-position center
-    background-size cover
+    background-position calc(50% + 50% * var(--x)) calc(25% + 25% * var(--y))
+    background-size 200vmax 120.156vmax
     -webkit-background-clip text
     background-clip text
+    transition background-position $timing-fast ease-out
 
   > p
     padding 0 $gap-normal

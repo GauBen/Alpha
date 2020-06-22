@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,48 +9,53 @@
   <body>
     <main class="splash-page _overflow-hidden">
       <article class="frame hero-alpha">
-        <h1 class="alpha">{{ "α" }}</h1>
+        <h1 class="alpha">α</h1>
         <h2 class="n7">n7</h2>
       </article>
       <article class="frame hero-ae">
         <div class="_overflow-hidden">
           <div class="_small-rotation">
-            <div class="portrait-row">
-              {% for j in [1, 2] -%}
-                {% for i in [1, 2, 3, 4, 5] -%}
-                  <img src="https://picsum.photos/300?{{ i }}" alt="Portrait" class="portrait">
+            <div class="portrait-row -on-scroll">
+              <div class="portrait-row">
+                {% for j in [1, 2, 3] -%}
+                  {% for i in [1, 2, 3, 4, 5, 11, 12, 13, 14, 15] -%}
+                    <img src="https://picsum.photos/300?{{ i }}" {% if j > 1 %}aria-hidden="true"{% endif %} alt="Portrait" class="portrait">
+                  {%- endfor %}
                 {%- endfor %}
-              {%- endfor %}
+              </div>
             </div>
           </div>
           <div class="_small-rotation -padded">
-            <div class="portrait-row -reversed">
-              {% for j in [1, 2] -%}
-                {% for i in [6, 7, 8, 9, 10] -%}
-                  <img src="https://picsum.photos/300?{{ i }}" alt="Portrait" class="portrait">
+            <div class="portrait-row -on-scroll -reversed">
+              <div class="portrait-row -reversed">
+                {% for j in [1, 2, 3] -%}
+                  {% for i in [6, 7, 8, 9, 10, 16, 17, 18, 19, 20] -%}
+                    <img src="https://picsum.photos/300?{{ i }}" {% if j > 1 %}aria-hidden="true"{% endif %} alt="Portrait" class="portrait">
+                  {%- endfor %}
                 {%- endfor %}
-              {%- endfor %}
+              </div>
             </div>
           </div>
         </div>
         <h1 class="aen7">AEn7</h1>
         <blockquote class="quoted-text">
-          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum iure ex repudiandae quia impedit veritatis voluptatibus aperiam eligendi, labore nesciunt! Necessitatibus, repellendus voluptatum reiciendis nobis rem minima itaque quo ipsa?</p>
-          <footer class="author">—Tiph', présidente de l'AEn7</footer>
+          <p>[À écrire pour de vrai, environ 50 mots] L’ENSEEIHT, qu’on écrit et qu’on prononce <strong>n7</strong>, c’est la meilleure école de l’histoire des écoles. Et l’Association des Élèves, ou AE, c’est les joyeux lurons qui vont rendre ton année mémorable.</p>
+          <footer class="author">—Tiph’, présidente de l’AEn7</footer>
         </blockquote>
       </article>
-      <article class="frame hero-clubs -tall">
+      <article class="frame hero-clubs">
         <div class="title">
-          <h1>Les clubs</h1>
-          <h2>Une vie associative très riche</h2>
+          <h1 class="big">Les clubs</h1>
+          <h2 class="small">Une vie associative très riche</h2>
         </div>
-        {% for i in [1, 2, 3, 4, 5, 6, 7, 8, 9] -%}
-          <div class="picture"><img src="https://picsum.photos/300/200?{{ i }}" alt="Random picture" class="framed-picture -picture-{{ i }}"></div>
+        {% for i in [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13] -%}
+          <div class="picture -slidein-{{(i % 4) + 1}}"><img src="https://picsum.photos/300/200?{{ i }}" alt="Random picture" class="framed-picture -picture-{{ i }}"></div>
         {%- endfor %}
       </article>
       <article class="frame hero-toulouse">
-        <h1 class="toulouse">Toulouse</h1>
-        <p>C'est la première ville étudiante de France, et l'n7 se trouve en plein coeur.</p>
+        <h1 class="toulouse">
+          <span>TOU<wbr>LOU<wbr>SE</span></h1>
+        <p>C'est la première ville étudiante de France, et l'n7 se trouve en plein coeur. Blabla à remplir.</p>
       </article>
       <article class="frame hero-discover">
         <h1 class="discover">Découvrez l'n7</h1>

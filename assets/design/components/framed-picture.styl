@@ -1,31 +1,45 @@
 .framed-picture
-  padding $gap-small
+  width auto
+  height 25vh
+  padding 1vh
   background-color $color
-  box-shadow 0 0 $gap-small $background-color
+  box-shadow 0 0 $gap-small alpha($background-color, 50%)
 
   &.-picture-1
-    transform translate(0%, -120%) rotate(5deg)
+    transform translate(0, -20vh) rotate(5deg)
 
   &.-picture-2
-    transform translate(70%, 70%) rotate(-20deg)
+    transform translate(30vh, -25vh) rotate(20deg)
 
   &.-picture-3
-    transform translate(-60%, 80%) rotate(35deg)
+    transform translate(25vh, 30vh) rotate(-20deg)
 
   &.-picture-4
-    transform translate(-50%, -90%) rotate(5deg)
+    transform translate(10vh, 25vh) rotate(-5deg)
 
   &.-picture-5
-    transform translate(60%, -100%) rotate(20deg)
+    transform translate(40vh, 10vh) rotate(-10deg)
 
   &.-picture-6
-    transform translate(10%, 90%) rotate(-5deg)
+    transform translate(-35vh, -35vh) rotate(25deg)
 
   &.-picture-7
-    transform translate(-30%, -100%) rotate(25deg)
+    transform translate(0, 40vh) rotate(25deg)
 
   &.-picture-8
-    transform translate(30%, 100%) rotate(25deg)
+    transform translate(-40vh, 20vh) rotate(10deg)
 
   &.-picture-9
-    transform translate(60%, -100%) rotate(-25deg)
+    transform translate(-35vh, 25vh) rotate(35deg)
+
+  &.-picture-10
+    transform translate(-45vh, 0) rotate(-25deg)
+
+  &.-picture-11
+    transform translate(-10vh, -35vh) rotate(5deg)
+
+  &.-picture-12
+    transform translate(30vh, -35vh) rotate(-25deg)
+
+  &.-picture-13
+    transform translate(40vh, -5vh) rotate(45deg)

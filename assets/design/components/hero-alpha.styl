@@ -3,12 +3,25 @@
   flex-direction column
   align-items center
   justify-content center
-  background linear-gradient(5deg, $background-color, $purple)
+  background linear-gradient(5deg, $background-color, $background-color, $purple)
 
   > .alpha
-    margin 0
-    font-size 60vmin
+  > .n7
+    margin $gap-normal
+    color $color
+    font-weight 300
+    text-shadow 0.05em 0 0.1em $purple, -0.05em 0 0.1em $ice
+    text-shadow calc(0.05em * var(--x)) calc(0.05em * var(--y)) 0.1em $purple, calc(-0.05em * var(--x)) calc(-0.05em * var(--y)) 0.1em $ice
+    transition text-shadow $timing-fast
+
+  > .alpha
+    height 60vmin
+    font-size 100vmin
+    font-family cmuserifextra_romanslanted, cursive
+    line-height 0.5
+    text-indent -0.1em
 
   > .n7
-    margin 0
-    font-size 10vmin
+    margin $gap-normal
+    font-size 20vmin
+    line-height 1
