@@ -1,0 +1,16 @@
+.beautiful-link
+  display inline-block
+  padding 2rem
+  color inherit
+  white-space nowrap
+  text-decoration inherit
+  background-image linear-gradient(lighten($purple, 25%), lighten($purple, 25%)), linear-gradient(currentColor, currentColor)
+  background-repeat no-repeat, no-repeat
+  background-position bottom right, bottom left
+  background-size 0% 4px, 100% 1px
+  transition background-size $timing-fast
+
+  &:hover
+  &:focus
+    background-position bottom left, bottom left
+    background-size 100% 4px, 100% 1px

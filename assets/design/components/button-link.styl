@@ -1,0 +1,16 @@
+.button-link
+  display inline-block
+  padding 2rem 4rem
+  color $background-color
+  font-weight bold
+  white-space nowrap
+  text-decoration inherit
+  background-image linear-gradient(100deg, lighten($purple, 25%) 50%, lighten($purple, 50%) 50.1%)
+  background-position right center
+  background-size 250% 100%
+  border-radius 2px
+  transition background-position $timing-normal
+
+  &:hover
+  &:focus
+    background-position left center
