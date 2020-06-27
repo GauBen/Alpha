@@ -9,19 +9,23 @@
   > .n7
     margin $gap-normal
     color $color
-    font-weight 300
-    text-shadow 0.05em 0 0.1em $purple, -0.05em 0 0.1em $ice
-    text-shadow calc(0.05em * var(--x)) calc(0.05em * var(--y)) 0.1em $purple, calc(-0.05em * var(--x)) calc(-0.05em * var(--y)) 0.1em $ice
-    transition text-shadow $timing-fast
 
   > .alpha
     height 60vmin
+    font-weight 300
     font-size 100vmin
     font-family cmuserifextra_romanslanted, cursive
     line-height 0.5
     text-indent -0.1em
+    text-shadow 0.05em 0 0.05em $purple, -0.05em 0 0.05em $ice
+    text-shadow calc(0.05em * var(--x)) calc(0.05em * var(--y)) 0.05em $purple, calc(-0.05em * var(--x)) calc(-0.05em * var(--y)) 0.05em $ice
+    transition text-shadow $timing-fast
 
   > .n7
+    width auto
+    height 15vmin
     margin $gap-normal
-    font-size 20vmin
-    line-height 1
+    filter drop-shadow(2vmin 0 0.5vmin alpha($purple, 75%)) drop-shadow(-2vmin 0 0.5vmin alpha($ice, 75%))
+    filter drop-shadow(calc(2vmin * var(--x)) calc(2vmin * var(--y)) 0.5vmin alpha($purple, 75%)) drop-shadow(calc(-2vmin * var(--x)) calc(-2vmin * var(--y)) 0.5vmin alpha($ice, 75%))
+    transition filter $timing-fast
+    fill currentColor

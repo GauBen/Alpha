@@ -20,4 +20,5 @@ $number-of-portraits = 10
 @import 'design/reset.styl'
 @import 'design/helpers.styl'
 @import 'design/fonts.styl'
-@import 'design/components/*.styl'
+/* stylelint-disable stylus/no-at-require */
+@require 'design/components/*.styl'

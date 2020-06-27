@@ -18,10 +18,10 @@
     background-image url('https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Toulouse_Capitole_Night_Wikimedia_Commons.jpg/1280px-Toulouse_Capitole_Night_Wikimedia_Commons.jpg')
     background-repeat no-repeat
     background-position center
-    background-position calc(50% + 50% * var(--x)) calc(25% + 25% * var(--y))
-    background-size 200vmax 120.156vmax
+    background-size cover
     -webkit-background-clip text
     background-clip text
+    background-attachment fixed
     transition background-position $timing-fast ease-out
 
   > p
