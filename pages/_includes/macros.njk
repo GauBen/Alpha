@@ -1,0 +1,15 @@
+{% macro parallaxShadow(src, alt, width, height) %}
+  <p class="-wide parallax-shadow">
+    <i class="shadow _parallax" aria-hidden="true"></i>
+    <img src="{{ src }}" alt="{{ alt }}" width="{{ width }}" height="{{ height }}" class="foreground _full-width">
+  </p>
+{% endmacro %}
+
+{% macro parallaxBlocs(tag, text) %}
+  <{{ tag }} class="parallax-blocs">
+    {{ text }}
+    <i class="bloc -b1 _parallax -alternate" aria-hidden="true"></i>
+    <i class="bloc -b4 _parallax" aria-hidden="true"></i>
+    <i class="bloc -b5 _parallax" aria-hidden="true"></i>
+  </{{ tag }}>
+{% endmacro %}

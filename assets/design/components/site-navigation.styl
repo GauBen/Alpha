@@ -1,0 +1,30 @@
+.site-navigation
+  display flex
+  flex-direction column
+  align-items center
+  justify-content center
+  padding $gap-large $gap-small
+  overflow hidden
+  color $dark-color
+  background-color $dark-background-color
+
+  > .title
+    font-weight 300
+    text-align center
+    text-transform uppercase
+
+  > .list
+    max-width $width-text
+    padding 0 $gap-small 0 2 * $gap-normal
+
+  /* stylelint-disable rscss/no-descendant-combinator */
+  a
+    display inline-block
+    margin-bottom $gap-small
+    beautiful-link($dark-link, $dark-background-color)
+
+  > .list .active
+    list-style-type '►  '
+
+    > a
+      beautiful-link(mix($purple, $dark-color), $dark-background-color)

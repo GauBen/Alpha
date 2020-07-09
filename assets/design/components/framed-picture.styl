@@ -1,45 +1,59 @@
+me-do-math($translateX, $translateY, $rotation, $parallaxAngle, $parallaxSpeed)
+  transform translate($translateX, $translateY) rotate($rotation)
+
+  @media (prefers-reduced-motion no-preference)
+    transform s(
+      'translate(calc(%s + %s * (var(--parallax) - var(--offset))), calc(%s + %s * (var(--parallax) - var(--offset)))) rotate(%s)',
+      $translateX,
+      $parallaxSpeed * cos($parallaxAngle),
+      $translateY,
+      $parallaxSpeed * sin($parallaxAngle),
+      $rotation
+    )
+
 .framed-picture
   width auto
   height 25vh
   padding 1vh
-  background-color $color
-  box-shadow 0 0 $gap-small alpha($background-color, 50%)
+  background-color $dark-color
+  box-shadow 0 0 $gap-small alpha($dark-background-color, 50%)
 
+  /* stylelint-disable length-zero-no-unit */
   &.-picture-1
-    transform translate(0, -20vh) rotate(5deg)
+    me-do-math(0vh, -20vh, 5deg, 15deg, 20vh)
 
   &.-picture-2
-    transform translate(30vh, -25vh) rotate(20deg)
+    me-do-math(30vh, -25vh, 20deg, -30deg, -30vh)
 
   &.-picture-3
-    transform translate(25vh, 30vh) rotate(-20deg)
+    me-do-math(25vh, 30vh, -20deg, 20deg, 40vh)
 
   &.-picture-4
-    transform translate(10vh, 25vh) rotate(-5deg)
+    me-do-math(10vh, 25vh, -5deg, -10deg, 10vh)
 
   &.-picture-5
-    transform translate(40vh, 10vh) rotate(-10deg)
+    me-do-math(40vh, 10vh, -10deg, 30deg, -30vh)
 
   &.-picture-6
-    transform translate(-35vh, -35vh) rotate(25deg)
+    me-do-math(-35vh, -35vh, 25deg, -10deg, -40vh)
 
   &.-picture-7
-    transform translate(0, 40vh) rotate(25deg)
+    me-do-math(0vh, 40vh, 25deg, 45deg, 10vh)
 
   &.-picture-8
-    transform translate(-40vh, 20vh) rotate(10deg)
+    me-do-math(-40vh, 20vh, 10deg, 10deg, 30vh)
 
   &.-picture-9
-    transform translate(-35vh, 25vh) rotate(35deg)
+    me-do-math(-35vh, 25vh, 35deg, -20deg, -20vh)
 
   &.-picture-10
-    transform translate(-45vh, 0) rotate(-25deg)
+    me-do-math(-45vh, 0vh, -25deg, 25deg, 40vh)
 
   &.-picture-11
-    transform translate(-10vh, -35vh) rotate(5deg)
+    me-do-math(-10vh, -35vh, 5deg, -30deg, -10vh)
 
   &.-picture-12
-    transform translate(30vh, -35vh) rotate(-25deg)
+    me-do-math(30vh, -35vh, -25deg, -30deg, 20vh)
 
   &.-picture-13
-    transform translate(40vh, -5vh) rotate(45deg)
+    me-do-math(40vh, -5vh, 45deg, 10deg, -30vh)

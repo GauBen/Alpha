@@ -1,7 +1,7 @@
 .button-link
   display inline-block
-  padding 2rem 4rem
-  color $background-color
+  padding $gap-normal 2 * $gap-normal
+  color $dark-background-color
   font-weight bold
   white-space nowrap
   text-decoration inherit
@@ -9,7 +9,9 @@
   background-position right center
   background-size 250% 100%
   border-radius 2px
-  transition background-position $timing-normal
+
+  @media (prefers-reduced-motion no-preference)
+    transition background-position $timing-normal
 
   &:hover
   &:focus

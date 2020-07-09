@@ -1,0 +1,23 @@
+beautiful-link($color, $background-color, $factor = 2, $second-color = $color)
+  $line = (1rem / 8)
+  $second-color ?= $color
+  padding-bottom $factor * $line
+  color $color
+  text-decoration none
+  background-image linear-gradient($second-color, $second-color), linear-gradient($color, $color)
+  background-repeat no-repeat, no-repeat
+  background-position bottom right, bottom left
+  background-size 0% ($factor * $line), 100% $line
+
+  @media (prefers-reduced-motion no-preference)
+    transition $timing-normal color, $timing-normal background-size
+
+  &:hover
+    background-position bottom left, bottom left
+    background-size 100% ($factor * $line), 100% $line
+
+  &:focus
+  &:active
+    color $background-color
+    background-position bottom left, bottom left
+    background-size 100% 100%, 100% $line

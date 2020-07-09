@@ -5,24 +5,33 @@
   justify-content center
 
   > .toulouse
-    display flex
-    align-items flex-end
-    height 50vh
     margin 0
-    padding 1vh 0 5vh
+    padding 3rem 2rem 6rem 0 // Asymetric padding looks better
     color transparent
-    font-size 20vh
+    font-size 25rem
     line-height 0.6
     letter-spacing -0.1em
     text-align center
-    background-image url('https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Toulouse_Capitole_Night_Wikimedia_Commons.jpg/1280px-Toulouse_Capitole_Night_Wikimedia_Commons.jpg')
+    background-color #154790
+    background-image url('https://upload.wikimedia.org/wikipedia/commons/4/4e/Toulouse_Capitole_Night_Wikimedia_Commons.jpg')
     background-repeat no-repeat
-    background-position center
-    background-size cover
+    background-position center 25%
+    background-size auto 100vh
     -webkit-background-clip text
     background-clip text
-    background-attachment fixed
-    transition background-position $timing-fast ease-out
+
+    @media (prefers-reduced-motion no-preference)
+      background-position center calc(30% + -50% * (var(--parallax) - var(--offset)))
+      transition background-position $timing-normal ease-out
+
+      @supports s('(-webkit-font-smoothing: antialiased) and selector(a > b)')
+        // Chrome-like only
+        background-position center 25%
+        background-attachment fixed
 
   > p
+    max-width $width-text
+    margin-right auto
+    margin-left auto
     padding 0 $gap-normal
+    text-align justify

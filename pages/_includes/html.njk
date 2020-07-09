@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="{{ description }}">
+    <meta property="og:url" content="https://alpha.enseeiht.fr{{ page.url | url }}">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="{{ title }} – α n7">
+    <meta property="og:image" content="https://i.ytimg.com/vi/dQw4w9WgXcQ/hqdefault.jpg">
+    <meta property="og:description" content="{{ description }}">
+    <meta property="og:locale" content="fr_FR">
+    <title>{{ title }} – α n7</title>
+    <link rel="stylesheet" href="/assets/design.styl">
+  </head>
+  <body>
+    {{ content | safe }}
+    <script src="/assets/main.ts"></script>
+  </body>
+</html>

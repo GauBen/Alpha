@@ -3,29 +3,28 @@
   flex-direction column
   align-items center
   justify-content center
-  background linear-gradient(5deg, $background-color, $background-color, $purple)
+  background linear-gradient(5deg, $dark-background-color, $dark-background-color, mix($purple, $ice))
 
   > .alpha
-  > .n7
-    margin $gap-normal
-    color $color
-
-  > .alpha
-    height 60vmin
-    font-weight 300
-    font-size 100vmin
-    font-family cmuserifextra_romanslanted, cursive
-    line-height 0.5
-    text-indent -0.1em
-    text-shadow 0.05em 0 0.05em $purple, -0.05em 0 0.05em $ice
-    text-shadow calc(0.05em * var(--x)) calc(0.05em * var(--y)) 0.05em $purple, calc(-0.05em * var(--x)) calc(-0.05em * var(--y)) 0.05em $ice
-    transition text-shadow $timing-fast
-
   > .n7
     width auto
-    height 15vmin
-    margin $gap-normal
-    filter drop-shadow(2vmin 0 0.5vmin alpha($purple, 75%)) drop-shadow(-2vmin 0 0.5vmin alpha($ice, 75%))
-    filter drop-shadow(calc(2vmin * var(--x)) calc(2vmin * var(--y)) 0.5vmin alpha($purple, 75%)) drop-shadow(calc(-2vmin * var(--x)) calc(-2vmin * var(--y)) 0.5vmin alpha($ice, 75%))
-    transition filter $timing-fast
+    margin $gap-large
+    color $dark-color
     fill currentColor
+
+    @media (prefers-reduced-motion no-preference)
+      transition filter $timing-fast
+
+  > .alpha
+    height 50vmin
+    filter drop-shadow(4vmin 0 2vmin $purple) drop-shadow(-4vmin 0 2vmin $ice)
+
+    @media (prefers-reduced-motion no-preference)
+      filter drop-shadow(calc(4vmin * var(--x)) calc(4vmin * var(--y)) 2vmin $purple) drop-shadow(calc(-4vmin * var(--x)) calc(-4vmin * var(--y)) 2vmin $ice)
+
+  > .n7
+    height 15vmin
+    filter drop-shadow(2vmin 0 0.5vmin alpha($purple, 75%)) drop-shadow(-2vmin 0 0.5vmin alpha($ice, 75%))
+
+    @media (prefers-reduced-motion no-preference)
+      filter drop-shadow(calc(2vmin * var(--x)) calc(2vmin * var(--y)) 0.5vmin alpha($purple, 75%)) drop-shadow(calc(-2vmin * var(--x)) calc(-2vmin * var(--y)) 0.5vmin alpha($ice, 75%))

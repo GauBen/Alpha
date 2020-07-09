@@ -1,14 +1,16 @@
 .portrait-row
   display inline-block
   white-space nowrap
-  animation portrait-row $timing-contemplative infinite linear
 
-  &.-on-scroll
-    animation portrait-row 1s linear paused
-    animation-delay calc(0.2 * -1s * var(--scroll))
+  @media (prefers-reduced-motion no-preference)
+    animation portrait-row $timing-contemplative infinite linear
 
-  &.-reversed
-    animation-name portrait-row-reversed
+    &.-on-scroll
+      animation portrait-row 1s linear paused
+      animation-delay calc(0.05 * -1s * var(--parallax))
+
+    &.-reversed
+      animation-name portrait-row-reversed
 
   > .portrait
     width auto

@@ -1,0 +1,58 @@
+me-do-math($parallaxSpeed)
+  @media (prefers-reduced-motion no-preference)
+    transform s(
+      'translate(0, calc(%s * (var(--parallax) - var(--offset) - 0.5)))',
+      $parallaxSpeed
+    )
+
+.parallax-blocs
+  position relative
+  display flex
+  align-items center
+  justify-content center
+
+  > .bloc
+    position absolute
+    width 10rem
+    height 10rem
+    background-color $purple
+    border-radius 50%
+    filter invert(1)
+    mix-blend-mode difference
+    transition $timing-slow background-color, $timing-fast transform ease-out
+
+    &:hover
+    &:active
+      background-color $ice
+
+    &.-b1
+      bottom 30%
+      left 5%
+      me-do-math(-30vh)
+
+    &.-b2
+      top 8%
+      right 10%
+      me-do-math(-20vh)
+
+    &.-b3
+      top 10%
+      right 5%
+      me-do-math(-40vh)
+
+    &.-b4
+      top -40%
+      left 0
+      me-do-math(-50vh)
+
+    &.-b5
+      top -30%
+      right -5%
+      me-do-math(-20vh)
+
+    &.-alternate
+      background-color $ice
+
+      &:hover
+      &:active
+        background-color $purple

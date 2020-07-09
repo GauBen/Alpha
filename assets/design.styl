@@ -1,8 +1,12 @@
 // **** Colors ****
-$color = #eee
-$background-color = #000
-$purple = #511bb8
+$color = #222
+$background-color = #fff
+$dark-color = #eee
+$dark-background-color = #000
+$purple = #9701d6
 $ice = #4cc4f2
+$link = mix($purple, $color)
+$dark-link = $dark-color
 // **** Margins and paddings ****
 $gap-small = 1rem
 $gap-normal = 2rem
@@ -16,10 +20,12 @@ $timing-slow = 1s
 $timing-contemplative = 120s
 // **** Other settings ****
 $number-of-portraits = 10
+$width-text = 80rem
+$width-wide = 100rem
 
 @import 'normalize.css/normalize.css'
-@import 'design/reset.styl'
-@import 'design/helpers.styl'
-@import 'design/fonts.styl'
-/* stylelint-disable stylus/no-at-require */
-@require 'design/components/*.styl'
+@import './design/mixins.styl'
+@import './design/defaults.styl'
+@import './design/helpers.styl'
+@import './design/fonts.styl'
+@require './design/components/*.styl'

@@ -11,3 +11,16 @@
 ._overflow-hidden
   max-width 100%
   overflow hidden
+
+._full-width
+  width 100%
+
+@media (prefers-reduced-motion no-preference)
+  ._parallax
+    transition $timing-fast transform ease-out
+
+  ._scroll-faster
+    transform translateY(calc(-10vh * (var(--parallax) - var(--offset))))
+
+a._beautiful
+  beautiful-link($link, $background-color)

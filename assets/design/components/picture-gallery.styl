@@ -1,0 +1,22 @@
+.picture-gallery
+  display flex
+  flex-direction row
+  flex-wrap wrap
+  align-items center
+  justify-content center
+
+  > .picture
+    margin $gap-small
+
+    @media (prefers-reduced-motion no-preference)
+      &.-p1
+        transform translateY(calc(-5vh * (var(--parallax) - var(--offset))))
+
+      &.-p2
+        transform translateY(calc(-10vh * (var(--parallax) - var(--offset))))
+
+      &.-p3
+        transform translateY(calc(-15vh * (var(--parallax) - var(--offset))))
+
+      &.-p4
+        transform translateY(calc(-20vh * (var(--parallax) - var(--offset))))

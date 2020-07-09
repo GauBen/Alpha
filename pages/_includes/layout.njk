@@ -1,0 +1,19 @@
+---
+layout: html.njk
+---
+<main class="main-content">
+  <h1 class="parallax-blocs">{{ title }}
+    <i class="bloc -b1 _parallax" aria-hidden="true"></i>
+    <i class="bloc -b2 _parallax" aria-hidden="true"></i>
+    <i class="bloc -b3 _parallax -alternate" aria-hidden="true"></i>
+  </h1>
+  {{ content | safe }}
+  <nav class="site-navigation">
+    <h2 class="title">Et ensuite ?</h2>
+    {{ collections.all | eleventyNavigation | eleventyNavigationToHtml({
+      listClass: 'list',
+      activeListItemClass: 'active',
+      activeKey: eleventyNavigation.key
+    }) | safe }}
+  </nav>
+</main>

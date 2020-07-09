@@ -9,6 +9,8 @@
   "rules": {
     "stylus/indentation": null,
     "stylus/single-line-comment": null,
+    "stylus/no-at-require": null,
+    "stylus/at-rule-empty-line-before": null,
     "declaration-empty-line-before": "never",
     "custom-property-empty-line-before": "never",
     "rscss/class-format": [
