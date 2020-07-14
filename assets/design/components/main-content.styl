@@ -1,6 +1,10 @@
+/* stylelint-disable no-descending-specificity */
 .main-content
   overflow hidden
-  background-color $background-color
+
+.main-content
+.main-content > .club
+  background-color inherit
 
   > h1
   > h2
@@ -36,7 +40,7 @@
     font-size 4em
     word-break break-word
     hyphens auto
-    background-color $background-color // Fix for Chrome
+    background-color inherit // Fix for Chrome
 
   > p
   > ul
@@ -67,4 +71,4 @@
     padding $gap-normal
 
   > p > a
-    @extend a._beautiful
+    beautiful-link($dark-link, $dark-background-color)

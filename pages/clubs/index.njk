@@ -1,0 +1,81 @@
+---
+layout: layout.njk
+title: Les clubs et les sports
+description: Découvrez les clubs de l’ENSEEIHT
+eleventyComputed:
+  eleventyNavigation:
+    key: clubs
+    title: '{{ title }}'
+    order: 4
+additionnalScripts: ['/assets/scripts/clubs.ts']
+---
+
+{% from 'macros.njk' import parallaxShadow,
+parallaxBlocs,
+parallaxLogo %}
+
+<form id="form"></form>
+<p class="-center">
+  <label for="search">Rechercher :</label>
+  <input type="search" name="search" id="search" list="datalist" form="form">
+  <button type="reset" form="form" class="_phantom">
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z"/></svg>
+  </button>
+  <datalist id="datalist"></datalist>
+</p>
+<p class="tag-list">
+  <span>Filtrer : </span>
+  {% for group in[
+    'artistique',
+    'sport',
+    'danse',
+    'musique',
+    'jeu',
+    'social',
+    'gastronomie',
+    'association',
+    'n7',
+    'culture',
+    'inp',
+    'technique'
+  ] %}
+    <span class="tag -{{ group | slug }}">
+      <a href="#{{ group | slug }}">
+        {{ 'INP' if group == 'inp' else ('n7' if group == 'n7' else (group | capitalize)) }}
+      </a>
+    </span>
+  {% endfor %}
+  <span class="tag">
+    <a href="#">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" class="_icon"><path d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z"/></svg>
+    </a>
+  </span>
+</p>
+<noscript>
+  <p>La recherche est en JavaScript.</p>
+</noscript>
+<p class="-center" id="counter">
+  <strong>{{ collections.sortedClubs.length }}</strong> clubs affichés.
+</p>
+
+{% for club in collections.sortedClubs %}
+  <div class="club" data-search="{{ club.data.name.toLowerCase() }} {% for group in club.data.groups %}{{ group | slug }} {% endfor %} {{ club.data.search | join(' ') }}">
+    <h2>{{ club.data.name }}</h2>
+    {% if club.data.logo %}
+      {{ parallaxLogo(club.data.logo[0], 'Logo du club ' + club.data.name, club.data.logo[1], club.data.logo[2]) }}
+    {% endif %}
+    {{ club.templateContent | safe }}
+    <p class="tag-list">
+      {% for group in club.data.groups %}
+        <span class="tag -{{ group | slug }}">
+          <a href="#{{ group | slug }}">
+            {{ 'INP' if group == 'inp' else ('n7' if group == 'n7' else (group | capitalize)) }}
+          </a>
+        </span>
+      {% endfor %}
+    </p>
+    {% if club.data.picture %}
+      {{ parallaxShadow(club.data.picture[0], 'Photo du club ' + club.data.name, club.data.picture[1], club.data.picture[2]) }}
+    {% endif %}
+  </div>
+{% endfor %}

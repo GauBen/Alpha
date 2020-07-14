@@ -13,3 +13,9 @@
     <i class="bloc -b5 _parallax" aria-hidden="true"></i>
   </{{ tag }}>
 {% endmacro %}
+
+{% macro parallaxLogo(src, alt, width, height) %}
+  <p class="-center">
+    <img src="{{ src }}" alt="{{ alt }}" width="{{ width }}" height="{{ height }}" class="_parallax _scroll-faster">
+  </p>
+{% endmacro %}

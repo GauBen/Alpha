@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" prefix="og: http://ogp.me/ns#">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,8 +13,11 @@
     <title>{{ title }} – α n7</title>
     <link rel="stylesheet" href="/assets/design.styl">
   </head>
-  <body>
+  <body {{ ('class="' + bodyClass + '"' if bodyClass) | safe }}>
     {{ content | safe }}
     <script src="/assets/main.ts"></script>
+    {% for script in additionnalScripts %}
+      <script src="{{ script }}"></script>
+    {% endfor %}
   </body>
 </html>

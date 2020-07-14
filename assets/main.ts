@@ -26,6 +26,7 @@ computeOffsetTop()
 
 window.addEventListener('scroll', e => scrollHandler(), { passive: true })
 window.addEventListener('resize', e => { computeOffsetTop(); scrollHandler() }, { passive: true })
+new ResizeObserver(computeOffsetTop).observe(document.body)
 
 const mouseHandler = (e: MouseEvent | TouchEvent) => {
   const w = window.innerWidth

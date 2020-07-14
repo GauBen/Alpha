@@ -3,10 +3,11 @@
   flex-direction column
   align-items center
   justify-content center
+  margin-top 2 * $gap-large
   padding $gap-large $gap-small
   overflow hidden
   color $dark-color
-  background-color $dark-background-color
+  background linear-gradient(to bottom, $dark-background-color, mix(mix($purple, $ice), $dark-background-color))
 
   > .title
     font-weight 300
@@ -21,10 +22,10 @@
   a
     display inline-block
     margin-bottom $gap-small
-    beautiful-link($dark-link, $dark-background-color)
+    beautiful-link($dark-color, $dark-background-color)
 
   > .list .active
     list-style-type '►  '
 
     > a
-      beautiful-link(mix($purple, $dark-color), $dark-background-color)
+      beautiful-link($dark-link, $dark-background-color)

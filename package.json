@@ -13,7 +13,9 @@
     "watch:parcel": "parcel _pre-dist/**/*.html --out-dir _dist --cache-dir _cache --no-source-maps",
     "clean": "rimraf ./_dist ./_pre-dist",
     "build": "yarn build:eleventy && yarn build:static && yarn build:parcel",
+    "build-bde": "yarn build:eleventy-bde && yarn build:static && yarn build:parcel-bde",
     "build:eleventy": "eleventy --output=_pre-dist",
+    "build:eleventy-bde": "eleventy --output=_pre-dist --pathprefix /~benaimg/alpha/",
     "build:static": "copy-and-watch ./{assets,static}/** _pre-dist",
     "build:parcel": "parcel build _pre-dist/**/*.html --out-dir _dist --cache-dir _cache --no-source-maps",
     "build:parcel-bde": "parcel build _pre-dist/**/*.html --out-dir _dist --cache-dir _cache --no-source-maps --public-url /~benaimg/alpha/"

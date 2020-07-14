@@ -9,7 +9,7 @@ eleventyComputed:
     order: 3
 ---
 
-{% from 'macros.njk' import parallaxShadow, parallaxBlocs %}
+{% from 'macros.njk' import parallaxShadow, parallaxBlocs, parallaxLogo %}
 
 L’AEn7 (**Association des Élèves de l’ENSEEIHT**), a été créée en 1950 pour représenter les élèves auprès de l’administration et d’organiser la vie associative de tous les élèves, et principalement de toi, futur·e première année de l’ENSEEIHT ! Notre AE est composée de 5 bureaux dont tu trouveras la description juste après.
 
@@ -19,9 +19,7 @@ L’AEn7 (**Association des Élèves de l’ENSEEIHT**), a été créée en 1950
 
 ## BDE
 
-<p class="-center">
-  <img src="https://picsum.photos/200?1" alt="Logo" width="200" height="200" class="_parallax _scroll-faster">
-</p>
+{{ parallaxLogo('/static/pictures/ae/bde.png', 'Logo du BDE', 300, 300) }}
 
 Le Bureau Des Élèves c’est LE bureau qui va organiser ta vie étudiante ! Nous sommes là pour que tu puisses pleinement profiter de ta nouvelle vie toulousaine en **planifiant plein d’évènements**.
 
@@ -29,10 +27,7 @@ Mais nous devons aussi nous charger du bon déroulement de ta vie académique. N
 
 ## Foy’
 
-<p class="-center parallax-blocs">
-  <img src="https://picsum.photos/200?2" alt="Logo" width="200" height="200" class="_parallax _scroll-faster">
-  <i class="bloc -b2 _parallax" aria-hidden="true"></i>
-</p>
+{{ parallaxLogo('/static/pictures/ae/foy.png', 'Logo du Foy', 300, 285) }}
 
 Lieu primordial de ta vie étudiante à l’n7, le Foyer saura combler tes envies. Cet endroit merveilleux, au nom si doux à l’oreille, saura combler tes attentes ! **Que tu sois plutôt pétanque ou baby-foot, Smash ou basket, que tu aimes simplement passer des moments agréables avec tes potes, le Foy’ est fait pour toi.**
 
@@ -40,9 +35,7 @@ Ouvert toute la journée pour te servir en cafés-chocos et autres **savoureus
 
 ## BDA
 
-<p class="-center">
-  <img src="https://picsum.photos/200?3" alt="Logo" width="200" height="200" class="_parallax _scroll-faster">
-</p>
+{{ parallaxLogo('/static/pictures/ae/bda.png', 'Logo du BDA', 300, 244) }}
 
 Avec les membres du Bureau Des Arts de l’n7, nous sommes déterminés pour **ajouter une touche artistique dans la vie étudiante** de l’n7. Nous te proposerons de multiples activités et événements : **voyages culturels, sorties cinéma et théâtre, ateliers artistiques et spectacles**. Nous veillerons à trouver un maximum d’offres et promotions grâce à nos partenaires et vous tiendrons au courant des événements intéressants ayant lieu à Toulouse.
 
@@ -50,11 +43,7 @@ Grâce à une relation soudée avec les autres BDA de Toulouse INP, vous pourrez
 
 ## BDD
 
-<p class="-center parallax-blocs">
-  <img src="https://picsum.photos/200?4" alt="Logo" width="200" height="200" class="_parallax _scroll-faster">
-  <i class="bloc -b1 _parallax -alternate" aria-hidden="true"></i>
-  <i class="bloc -b3 _parallax" aria-hidden="true"></i>
-</p>
+{{ parallaxLogo('/static/pictures/ae/bdd.png', 'Logo du BDD', 300, 199) }}
 
 Le Bureau du Développement Durable est là pour t’aider à **chouchouter ta planète** en te montrant l’importance et la facilité d’adopter des gestes comme le recyclage et la réduction de tes détritus pour optimiser ton impact sur l’environnement.
 
@@ -62,9 +51,7 @@ Pour le plus grand plaisir de tes papilles **nous te proposerons également tout
 
 ## BDS
 
-<p class="-center">
-  <img src="https://picsum.photos/200?5" alt="Logo" width="200" height="200" class="_parallax _scroll-faster">
-</p>
+{{ parallaxLogo('/static/pictures/ae/bds.png', 'Logo du BDS', 300, 300) }}
 
 Si le sport t’a manqué ces dernières années, le Bureau Des Sports est LE bureau qui t’intéressera ! Notre job ? Te faire bouger toute l’année !
 **Tournois sportifs, events au Trampoline Park, Urban Soccer et défis du bureau t’attendent**. Ces événements seront autant accessibles aux athlètes qu’aux sportifs du dimanche. De quoi kiffer ton année tout en bougeant !
@@ -74,7 +61,7 @@ Si le sport t’a manqué ces dernières années, le Bureau Des Sports est LE bu
 L’inté, le ski et le gala ne sont que la partie émergée de l’iceberg… Ton AE violette a beaucoup plus à te proposer, comme des weekends en Espagne ou des comptétitions inter-écoles. Tu veux en savoir plus ? C’est sur cette page que ça se passe :
 
 <div class="-center -padded">
-  <a href="/ae/events/" class="button-link"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M11 6.999c2.395.731 4.27 2.607 4.999 5.001.733-2.395 2.608-4.269 5.001-5-2.393-.731-4.268-2.605-5.001-5-.729 2.394-2.604 4.268-4.999 4.999zm7 7c1.437.438 2.562 1.564 2.999 3.001.44-1.437 1.565-2.562 3.001-3-1.436-.439-2.561-1.563-3.001-3-.437 1.436-1.562 2.561-2.999 2.999zm-6 5.501c1.198.365 2.135 1.303 2.499 2.5.366-1.198 1.304-2.135 2.501-2.5-1.197-.366-2.134-1.302-2.501-2.5-.364 1.197-1.301 2.134-2.499 2.5zm-6.001-12.5c-.875 2.873-3.128 5.125-5.999 6.001 2.876.88 5.124 3.128 6.004 6.004.875-2.874 3.128-5.124 5.996-6.004-2.868-.874-5.121-3.127-6.001-6.001z"/></svg> Les évènements <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path transform="scale(-1, 1) translate(-24, 0)" d="M11 6.999c2.395.731 4.27 2.607 4.999 5.001.733-2.395 2.608-4.269 5.001-5-2.393-.731-4.268-2.605-5.001-5-.729 2.394-2.604 4.268-4.999 4.999zm7 7c1.437.438 2.562 1.564 2.999 3.001.44-1.437 1.565-2.562 3.001-3-1.436-.439-2.561-1.563-3.001-3-.437 1.436-1.562 2.561-2.999 2.999zm-6 5.501c1.198.365 2.135 1.303 2.499 2.5.366-1.198 1.304-2.135 2.501-2.5-1.197-.366-2.134-1.302-2.501-2.5-.364 1.197-1.301 2.134-2.499 2.5zm-6.001-12.5c-.875 2.873-3.128 5.125-5.999 6.001 2.876.88 5.124 3.128 6.004 6.004.875-2.874 3.128-5.124 5.996-6.004-2.868-.874-5.121-3.127-6.001-6.001z"/></svg></a>
+  <a href="{{ '/ae/events/' | url }}" class="button-link"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M11 6.999c2.395.731 4.27 2.607 4.999 5.001.733-2.395 2.608-4.269 5.001-5-2.393-.731-4.268-2.605-5.001-5-.729 2.394-2.604 4.268-4.999 4.999zm7 7c1.437.438 2.562 1.564 2.999 3.001.44-1.437 1.565-2.562 3.001-3-1.436-.439-2.561-1.563-3.001-3-.437 1.436-1.562 2.561-2.999 2.999zm-6 5.501c1.198.365 2.135 1.303 2.499 2.5.366-1.198 1.304-2.135 2.501-2.5-1.197-.366-2.134-1.302-2.501-2.5-.364 1.197-1.301 2.134-2.499 2.5zm-6.001-12.5c-.875 2.873-3.128 5.125-5.999 6.001 2.876.88 5.124 3.128 6.004 6.004.875-2.874 3.128-5.124 5.996-6.004-2.868-.874-5.121-3.127-6.001-6.001z"/></svg> Les évènements <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path transform="scale(-1, 1) translate(-24, 0)" d="M11 6.999c2.395.731 4.27 2.607 4.999 5.001.733-2.395 2.608-4.269 5.001-5-2.393-.731-4.268-2.605-5.001-5-.729 2.394-2.604 4.268-4.999 4.999zm7 7c1.437.438 2.562 1.564 2.999 3.001.44-1.437 1.565-2.562 3.001-3-1.436-.439-2.561-1.563-3.001-3-.437 1.436-1.562 2.561-2.999 2.999zm-6 5.501c1.198.365 2.135 1.303 2.499 2.5.366-1.198 1.304-2.135 2.501-2.5-1.197-.366-2.134-1.302-2.501-2.5-.364 1.197-1.301 2.134-2.499 2.5zm-6.001-12.5c-.875 2.873-3.128 5.125-5.999 6.001 2.876.88 5.124 3.128 6.004 6.004.875-2.874 3.128-5.124 5.996-6.004-2.868-.874-5.121-3.127-6.001-6.001z"/></svg></a>
 </div>
 
 {{ parallaxShadow('https://picsum.photos/800/500?1', 'Ok cool', 800, 500) }}

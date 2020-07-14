@@ -32,11 +32,11 @@
       line-height 0.9
       letter-spacing -0.05em
       text-transform uppercase
-      background-image linear-gradient(to bottom, $dark-color, lighten($purple, 50%))
+      background-image linear-gradient(to bottom, $dark-color, mix($purple, $dark-color))
       -webkit-background-clip text
       background-clip text
       filter drop-shadow(0 0 $gap-normal $dark-background-color)
 
     > .small
-      color lighten($purple, 50%)
+      color mix($purple, $dark-color)
       text-shadow 0 0 $gap-normal $dark-background-color

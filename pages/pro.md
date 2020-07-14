@@ -9,9 +9,13 @@ eleventyComputed:
     order: 5
 ---
 
+{% from 'macros.njk' import parallaxShadow, parallaxBlocs %}
+
 ## L’entreprenariat à l’n7
 
 Tu entres peut-être en école en ayant déjà une idée de ce que tu veux faire plus tard. Mieux, **tu as une idée innovante**, un projet passionnant à construire ! L’n7 propose de t’aider dans tes projets d’entrepreneuriat. Grâce à l’option Intra & Entrepreneuria, le statut de l’étudiant entrepreneur, l’incubateur NStart, **l’entrepreneuriat est réellement au coeur des ambitions de l’ENSEEIHT**.
+
+{{ parallaxShadow('https://picsum.photos/1600/600?3', 'super', 800, 300) }}
 
 ### Le statut étudiant-entrepreneur
 
@@ -21,6 +25,8 @@ Les étudiants qui souhaitent créer leur entreprise peuvent profiter de ce stat
 
 Cette option est enseignée dans le cadre des cours de SHS (voir plaquette de l’école) en anglais. Elle te permet de te familiariser à tout ce qui touche à l’Intra et l’Entrepreneuriat. Tu participeras à des interventions de professionnels sur des thèmes tel que : Organizational change, open innovation, cultural difference. Tu pourras rencontrer des anciens de l’n7 et apprendre à pitcher ton projet professionnel devant un jury.
 
+{{ parallaxShadow('https://picsum.photos/1600/600?1', 'super', 800, 300) }}
+
 ### NStart
 
 Créé par l’AIn7 (présentée plus bas) et l’n7, l’incubateur NStart développe l’esprit d’entreprenariat **en accompagnant les projets de startups innovantes** les plus prometteurs portés par des étudiants, jeunes diplômés et chercheurs de l’n7. L’incubateur propose : un espace de co-working, la mise en relation avec une communauté d’entrepreneurs et d’alumni de l’n7, un accès aux fab labs de l’environnement Toulousain, des financements et bien d’autres !
@@ -28,6 +34,8 @@ Créé par l’AIn7 (présentée plus bas) et l’n7, l’incubateur NStart dév
 ### La recherche
 
 Si l’ENSEEIHT a aujourd’hui une telle réputation dans le milieu professionnel, c’est qu’elle te permet de te lancer aussi bien dans l’ingénierie que dans la recherche. Grâce à ses **liens très actifs avec les laboratoires du CNRS**, ses nombreux intervenants doctorants et ses conférences internationales réputées, l’école te porte au plus proche de la recherche dès ton arrivée ! Quelle que soit ta filière, tes cours te seront dispensés par des chercheurs. Les options de troisième année sont basées sur les domaines de recherche de nos laboratoires partenaires t’offrant par ailleurs des possibilités de stages très intéressantes.
+
+{{ parallaxShadow('https://picsum.photos/1600/600?2', 'super', 800, 300) }}
 
 ## AIn7
 
@@ -51,6 +59,8 @@ L’association favorise le renforcement des liens entre tous ses membres. Visit
 Tu veux **vivre une première expérience professionnalisante** dès ton arrivée à l’ENSEEIHT ? Alors n’hésite plus et entre dans le plus grand mouvement étudiant de France en rejoignant N7 Consulting, la Junior-Entreprise de l’école en tant qu’administrateur ou consultant.
 
 Constituée de 26 administrateurs et de nombreux potentiels consultants, nous sommes l’intermédiaire privilégié entre les étudiants de l’école et les entreprises. Au quotidien, notre mission consiste à démarcher des clients, recruter des consultants dans l’école, suivre et **réaliser des projets concrets en utilisant les compétences théoriques acquises pendant la formation**.
+
+{{ parallaxShadow('https://picsum.photos/1600/800?1', 'super', 800, 400) }}
 
 **Tu veux être administrateur ?** Rejoins notre équipe et tu auras l’occasion de rencontrer des clients venant d’entreprises de tous les domaine, négocier des contrats, éditer des documents relatifs aux études et monter en compétences dans de nombreux autres domaines comme **le business, le management et la communication**. Être Junior-Entrepreneur, c’est aussi assister à de nombreuses formations tout au long de l’année dispensées par des professionnels et agrandir ton réseau durant les nombreux événements auxquels nous participons. Mais avant tout, se lancer dans l’aventure N7 Consulting c’est faire partie d’une expérience humaine hors du commun. Dans une ambiance conviviale, l’ambition et les liens noués avec les autres membres feront de ton mandat une année inoubliable. Tu auras l’occasion de rencontrer des Junior-Entrepreneurs à travers toute la France et tu pourras participer à des congrès plusieurs fois par an regroupant plus de 1 000 étudiants.
 

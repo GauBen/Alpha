@@ -5,6 +5,12 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.setDataDeepMerge(true)
   eleventyConfig.addPlugin(eleventyNavigationPlugin)
 
+  eleventyConfig.addCollection('sortedClubs', collectionApi => {
+    return collectionApi.getFilteredByTag('club').sort(function (a, b) {
+      return 2 * Number(a.data.name.toLowerCase() > b.data.name.toLowerCase()) - 1
+    })
+  })
+
   eleventyConfig.setBrowserSyncConfig({
     ui: false,
     server: {

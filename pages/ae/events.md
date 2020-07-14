@@ -109,4 +109,4 @@ Plutôt que de t’assommer de texte, on te propose ici une petite galerie de ph
 
 {{ parallaxShadow('https://picsum.photos/600/400?28', 'wow', 600, 400) }}
 
-Ça donne envie pas vrai ?
+Ça donne envie, pas vrai ?
