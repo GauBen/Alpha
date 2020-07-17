@@ -16,9 +16,9 @@ Plutôt que de t’assommer de texte, on te propose ici une petite galerie de ph
 ## L’Intégration
 
 <div class="parallax-blocs picture-gallery">
-  <img src="https://picsum.photos/600/400?1" alt="ah" width="600" height="400" class="picture -p3 _parallax">
-  <img src="https://picsum.photos/600/400?2" alt="ah" width="600" height="400" class="picture -p1 _parallax">
-  <img src="https://picsum.photos/600/400?3" alt="ah" width="600" height="400" class="picture -p4 _parallax">
+  <img src="/static/pictures/events/inte-1.jpg" alt="Les 1A dans un bar" width="600" height="400" class="picture -p3 _parallax">
+  <img src="/static/pictures/events/inte-2.jpg" alt="Les 1A dans un jeu" width="600" height="400" class="picture -p1 _parallax">
+  <img src="/static/pictures/events/inte-3.jpg" alt="Les 1A à la file indienne" width="600" height="400" class="picture -p4 _parallax">
   <i class="bloc -b2 -alternate _parallax" aria-hidden="true"></i>
   <i class="bloc -b3 _parallax" aria-hidden="true"></i>
 </div>
@@ -26,28 +26,20 @@ Plutôt que de t’assommer de texte, on te propose ici une petite galerie de ph
 ## Le weekend d’inté
 
 <div class="parallax-blocs picture-gallery">
-  <img src="https://picsum.photos/600/400?4" alt="ah" width="600" height="400" class="picture -p4 _parallax">
-  <img src="https://picsum.photos/600/400?5" alt="ah" width="600" height="400" class="picture -p2 _parallax">
+  <img src="/static/pictures/events/wei-1.jpg" alt="Mousse party" width="600" height="400" class="picture -p4 _parallax">
+  <img src="/static/pictures/events/wei-2.jpg" alt="Des paillettes dans ma vie, Kévin" width="600" height="400" class="picture -p2 _parallax">
   <i class="bloc -b1 _parallax" aria-hidden="true"></i>
 </div>
 
-## INPouce
-
-{{ parallaxShadow('https://picsum.photos/600/400?6', 'wow', 600, 400) }}
-
 ## Barcelone
 
-<div class="parallax-blocs picture-gallery">
-  <img src="https://picsum.photos/600/400?7" alt="ah" width="600" height="400" class="picture -p1 _parallax">
-  <img src="https://picsum.photos/600/400?8" alt="ah" width="600" height="400" class="picture -p2 _parallax">
-  <i class="bloc -b3 -alternate _parallax" aria-hidden="true"></i>
-</div>
+{{ parallaxShadow('/static/pictures/events/barcelone.jpg', 'Barcelone', 800, 500) }}
 
 ## Les INPiades
 
 <div class="parallax-blocs picture-gallery">
-  <img src="https://picsum.photos/600/400?9" alt="ah" width="600" height="400" class="picture -p3 _parallax">
-  <img src="https://picsum.photos/600/400?10" alt="ah" width="600" height="400" class="picture -p1 _parallax">
+  <img src="/static/pictures/events/inpiades-1.jpg" alt="Des n7iens dans un gymnase" width="600" height="400" class="picture -p3 _parallax">
+  <img src="/static/pictures/events/inpiades-2.jpg" alt="Des n7iens qui jouent au ballon" width="600" height="400" class="picture -p1 _parallax">
   <i class="bloc -b3 -alternate _parallax" aria-hidden="true"></i>
 </div>
 
@@ -69,7 +61,7 @@ Plutôt que de t’assommer de texte, on te propose ici une petite galerie de ph
   <img src="https://picsum.photos/600/400?15" alt="ah" width="600" height="400" class="picture -p1 _parallax">
   <img src="https://picsum.photos/600/400?16" alt="ah" width="600" height="400" class="picture -p2 _parallax">
   <img src="https://picsum.photos/600/400?17" alt="ah" width="600" height="400" class="picture -p3 _parallax">
-  <img src="https://picsum.photos/600/400?18" alt="ah" width="600" height="400" class="picture -p4 _parallax">
+  <img src="/static/pictures/events/campagnes-3.jpg" alt="L’annonce des résultats" width="776" height="400" class="picture -p4 _parallax">
   <i class="bloc -b1 -alternate _parallax" aria-hidden="true"></i>
   <i class="bloc -b2 -alternate _parallax" aria-hidden="true"></i>
   <i class="bloc -b3 _parallax" aria-hidden="true"></i>
@@ -78,35 +70,25 @@ Plutôt que de t’assommer de texte, on te propose ici une petite galerie de ph
 ## Le Gala
 
 <div class="parallax-blocs picture-gallery">
-  <img src="https://picsum.photos/600/400?19" alt="ah" width="600" height="400" class="picture -p4 _parallax">
-  <img src="https://picsum.photos/600/400?20" alt="ah" width="600" height="400" class="picture -p1 _parallax">
-  <img src="https://picsum.photos/600/400?21" alt="ah" width="600" height="400" class="picture -p2 _parallax">
+  <img src="/static/pictures/events/gala-1.jpg" alt="Le feu d’artifice du gala" width="600" height="400" class="picture -p4 _parallax">
+  <img src="/static/pictures/events/gala-2.jpg" alt="Le plus beau DJ du gala" width="600" height="400" class="picture -p1 _parallax">
   <i class="bloc -b1 -alternate _parallax" aria-hidden="true"></i>
 </div>
 
 ## Le ski
 
 <div class="parallax-blocs picture-gallery">
-  <img src="https://picsum.photos/600/400?22" alt="ah" width="600" height="400" class="picture -p3 _parallax">
-  <img src="https://picsum.photos/600/400?23" alt="ah" width="600" height="400" class="picture -p2 _parallax">
-  <img src="https://picsum.photos/600/400?24" alt="ah" width="600" height="400" class="picture -p4 _parallax">
+  <img src="/static/pictures/events/ski-1.jpg" alt="Des beaux skieurs" width="600" height="400" class="picture -p3 _parallax">
+  <img src="/static/pictures/events/ski-2.jpg" alt="Une belle montagne" width="600" height="400" class="picture -p2 _parallax">
   <i class="bloc -b3 _parallax" aria-hidden="true"></i>
 </div>
 
-## OL’INP
-
-{{ parallaxShadow('https://picsum.photos/600/400?25', 'wow', 600, 400) }}
-
 ## Le TEDx
 
-<div class="parallax-blocs picture-gallery">
-  <img src="https://picsum.photos/600/400?26" alt="ah" width="600" height="400" class="picture -p1 _parallax">
-  <img src="https://picsum.photos/600/400?27" alt="ah" width="600" height="400" class="picture -p4 _parallax">
-  <i class="bloc -b2 _parallax" aria-hidden="true"></i>
-</div>
+{{ parallaxShadow('/static/pictures/events/tedx.jpg', 'Le TEDx', 800, 500) }}
 
 ## L’edhec
 
-{{ parallaxShadow('https://picsum.photos/600/400?28', 'wow', 600, 400) }}
+{{ parallaxShadow('/static/pictures/events/edhec.jpg', 'La course de bato', 800, 600) }}
 
 Ça donne envie, pas vrai ?
