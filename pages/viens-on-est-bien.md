@@ -13,17 +13,17 @@ Merci d’avoir visité notre plaquette, nous espérons te retrouver à l’n7 l
 
 ## Remerciements
 
-* L’administration pour son soutient
+* L’administration pour son soutien
 * net7 sans qui nous n’aurions pas pu réaliser cette plaquette
 * TVn7 pour la vidéo alpha
 * Photo7 pour leur investissement pendant l’année qui nous permet d’avoir des photos de qualité
 
 Aller on se retrouve en septembre pour une intégration de l’AEspace !
 
-Hophophop ?
-
 ## Crédits
 
+* Photos de l’école par JJ Gelbar
 * Photo de la frappe par [Ivan Pergasi](https://unsplash.com/@crazyivan_ita) sur Unsplash
 * Icônes par [Iconmonstr](https://iconmonstr.com/)
 * Symbole alpha par Donald Knuth
+* Hophophop ?
