@@ -18,6 +18,11 @@ module.exports = (eleventyConfig) => {
     }
   })
 
+  let counter = 0
+  eleventyConfig.addFilter('counter', function () {
+    return counter++
+  })
+
   return {
     dir: {
       input: 'pages'

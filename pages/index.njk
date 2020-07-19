@@ -26,8 +26,24 @@ eleventyNavigation:
         <div class="portrait-row -on-scroll">
           <div class="portrait-row">
             {% for j in [1, 2, 3] -%}
-              {% for i in [1, 2, 3, 4, 5, 11, 12, 13, 14, 15] -%}
-                <img src="/static/pictures/hero/portraits/gautier.jpg" {% if j > 1 %}aria-hidden="true"{% endif %} alt="Portrait" class="portrait">
+              {% for i in [
+                'Gautier',
+                'Juliette',
+                'Késia',
+                'Lucas',
+                'Tiphaine',
+                'Abraham',
+                'Alexis',
+                'Vivien',
+                'Clothilde',
+                'Cyril',
+                'Éloïse',
+                'Enguerran',
+                'Fantin',
+                'Florentin',
+                'Joceran'
+              ] -%}
+                <img src="/static/pictures/hero/portraits/{{ i | slug }}.jpg" width="300" height="300" {% if j > 1 %}aria-hidden="true"{% endif %} alt="Portrait de {{ i }}" class="portrait">
               {%- endfor %}
             {%- endfor %}
           </div>
@@ -37,8 +53,24 @@ eleventyNavigation:
         <div class="portrait-row -on-scroll -reversed">
           <div class="portrait-row -reversed">
             {% for j in [1, 2, 3] -%}
-              {% for i in [6, 7, 8, 9, 10, 16, 17, 18, 19, 20] -%}
-                <img src="/static/pictures/hero/portraits/gautier.jpg" width="300" height="300" {% if j > 1 %}aria-hidden="true"{% endif %} alt="Portrait" class="portrait">
+              {% for i in [
+                'Mathylde',
+                'Nathan',
+                'Logan',
+                'Lou',
+                'Margot',
+                'Marine',
+                'Théo C',
+                'Pablo',
+                'Pascal',
+                'Pol',
+                'Robin',
+                'Satoru',
+                'Sophie',
+                'Thadée',
+                'Théo'
+              ] -%}
+                <img src="/static/pictures/hero/portraits/{{ i | slug }}.jpg" width="300" height="300" {% if j > 1 %}aria-hidden="true"{% endif %} alt="Portrait de {{ i }}" class="portrait">
               {%- endfor %}
             {%- endfor %}
           </div>

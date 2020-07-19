@@ -1,6 +1,7 @@
 {% macro parallaxShadow(src, alt, width, height) %}
   <p class="-wide parallax-shadow">
-    <i class="shadow _parallax" aria-hidden="true"></i>
+    {%- set i = 0 | counter -%}
+    <i class="shadow _parallax{{ ' -alternate' if i % 4 == 0 }}" aria-hidden="true"></i>
     <img src="{{ src }}" alt="{{ alt }}" width="{{ width }}" height="{{ height }}" class="foreground _full-width">
   </p>
 {% endmacro %}
@@ -8,14 +9,21 @@
 {% macro parallaxBlocs(tag, text) %}
   <{{ tag }} class="parallax-blocs">
     {{ text }}
-    <i class="bloc -b1 _parallax -alternate" aria-hidden="true"></i>
-    <i class="bloc -b4 _parallax" aria-hidden="true"></i>
-    <i class="bloc -b5 _parallax" aria-hidden="true"></i>
+    {%- set i = 0 | counter -%}
+    <i class="bloc -b1 _parallax{{ ' -alternate' if i % 3 == 0 }}" aria-hidden="true"></i>
+    <i class="bloc -b4 _parallax{{ ' -alternate' if i % 3 == 1 }}" aria-hidden="true"></i>
+    <i class="bloc -b5 _parallax{{ ' -alternate' if i % 3 == 2 }}" aria-hidden="true"></i>
   </{{ tag }}>
 {% endmacro %}
 
 {% macro parallaxLogo(src, alt, width, height) %}
-  <p class="-center">
+  <p class="-center parallax-blocs">
     <img src="{{ src }}" alt="{{ alt }}" width="{{ width }}" height="{{ height }}" class="_parallax _scroll-faster">
+    {%- set i = 0 | counter -%}
+    {%- if i % 4 == 0 -%}
+      <i class="bloc -b5 _parallax{{ ' -alternate' if i % 3 == 0 }}" aria-hidden="true"></i>
+    {%- elif i % 2 == 0 -%}
+      <i class="bloc -b1 _parallax" aria-hidden="true"></i>
+    {%- endif -%}
   </p>
 {% endmacro %}
