@@ -46,10 +46,10 @@ Plutôt que de t’assommer de texte, on te propose ici une petite galerie de ph
 ## Les Hall C
 
 <div class="parallax-blocs picture-gallery">
-  <img src="https://picsum.photos/600/400?11" alt="ah" width="600" height="400" class="picture -p4 _parallax">
-  <img src="https://picsum.photos/600/400?12" alt="ah" width="600" height="400" class="picture -p2 _parallax">
-  <img src="https://picsum.photos/600/400?13" alt="ah" width="600" height="400" class="picture -p1 _parallax">
-  <img src="https://picsum.photos/600/400?14" alt="ah" width="600" height="400" class="picture -p3 _parallax">
+  <img src="/static/pictures/events/hall-c-1.jpg" alt="Grosse soirée avec du monde" width="600" height="400" class="picture -p4 _parallax">
+  <img src="/static/pictures/events/hall-c-2.jpg" alt="Grosse soirée avec du monde" width="600" height="400" class="picture -p2 _parallax">
+  <img src="/static/pictures/events/hall-c-3.jpg" alt="Grosse soirée avec du monde" width="600" height="400" class="picture -p1 _parallax">
+  <img src="/static/pictures/events/hall-c-4.jpg" alt="Grosse soirée avec du monde" width="600" height="400" class="picture -p3 _parallax">
   <i class="bloc -b1 -alternate _parallax" aria-hidden="true"></i>
   <i class="bloc -b2 -alternate _parallax" aria-hidden="true"></i>
   <i class="bloc -b3 _parallax" aria-hidden="true"></i>
@@ -58,10 +58,10 @@ Plutôt que de t’assommer de texte, on te propose ici une petite galerie de ph
 ## Les campagnes
 
 <div class="parallax-blocs picture-gallery">
-  <img src="https://picsum.photos/600/400?15" alt="ah" width="600" height="400" class="picture -p1 _parallax">
-  <img src="https://picsum.photos/600/400?16" alt="ah" width="600" height="400" class="picture -p2 _parallax">
-  <img src="https://picsum.photos/600/400?17" alt="ah" width="600" height="400" class="picture -p3 _parallax">
-  <img src="/static/pictures/events/campagnes-3.jpg" alt="L’annonce des résultats" width="776" height="400" class="picture -p4 _parallax">
+  <img src="/static/pictures/events/campagnes-3.jpg" alt="Un petit déjeuner des listeux" width="669" height="400" class="picture -p1 _parallax">
+  <img src="/static/pictures/events/campagnes-1.jpg" alt="De valeureux guerriers" width="600" height="400" class="picture -p2 _parallax">
+  <img src="/static/pictures/events/campagnes-2.jpg" alt="De valeureux guerriers aussi" width="600" height="400" class="picture -p3 _parallax">
+  <img src="/static/pictures/events/campagnes-4.jpg" alt="L’annonce des résultats" width="776" height="400" class="picture -p4 _parallax">
   <i class="bloc -b1 -alternate _parallax" aria-hidden="true"></i>
   <i class="bloc -b2 -alternate _parallax" aria-hidden="true"></i>
   <i class="bloc -b3 _parallax" aria-hidden="true"></i>
