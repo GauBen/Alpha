@@ -2,10 +2,11 @@
 layout: html.njk
 ---
 <main class="main-content">
+  {%- set i = 0 | counter -%}
   <h1 class="parallax-blocs">{{ title }}
-    <i class="bloc -b1 _parallax" aria-hidden="true"></i>
-    <i class="bloc -b2 _parallax" aria-hidden="true"></i>
-    <i class="bloc -b3 _parallax -alternate" aria-hidden="true"></i>
+    <i class="bloc -b1 _parallax{{ ' -alternate' if i % 3 == 0 }}" aria-hidden="true"></i>
+    <i class="bloc -b2 _parallax{{ ' -alternate' if i % 3 == 1 }}" aria-hidden="true"></i>
+    <i class="bloc -b3 _parallax{{ ' -alternate' if i % 3 == 2 }}" aria-hidden="true"></i>
   </h1>
   {{ content | safe }}
   <nav class="site-navigation">
