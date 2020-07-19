@@ -38,6 +38,14 @@ a._beautiful
 ._color-inherit
   color inherit
 
+._hocus
+  @media (prefers-reduced-motion no-preference)
+    transition $timing-fast color
+
+  &:hover
+  &:focus
+    color $dark-link
+
 button._phantom
   color inherit
   background-color transparent
