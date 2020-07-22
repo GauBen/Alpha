@@ -11,6 +11,10 @@ eleventyComputed:
 
 Merci d’avoir visité notre plaquette, nous espérons te retrouver à l’n7 l’année prochaine. En attendant si tu as des questions n’hésites pas à rejoindre [le groupe Facebook admissibles 2020](https://www.facebook.com/groups/2624635341197811).
 
+Une petite vidéo de présentation en passant ?
+
+<p class="-center"><iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/rX7Nd_6FEas" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" style="max-width:100%" allowfullscreen></iframe></p>
+
 ## Remerciements
 
 * L’administration pour son soutien
